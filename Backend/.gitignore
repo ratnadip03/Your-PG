@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+Frontend/PgWebsite/node_modules/
+Backend/node_modules/
+
+# Environment variables (Security)
+.env
+Backend/.env
+
+# System files
+.DS_Store
