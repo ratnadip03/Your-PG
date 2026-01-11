@@ -2,22 +2,30 @@
 
 > **Bridging the gap between students, safe accommodation, and compatible roommates.**
 
+![MERN Stack](https://img.shields.io/badge/Stack-MERN-blue?style=for-the-badge)
+![Gemini AI](https://img.shields.io/badge/AI-Gemini_API-magenta?style=for-the-badge)
+![Google Maps](https://img.shields.io/badge/Google_Maps-Platform-green?style=for-the-badge)
+
 ## 📌 Project Overview
 Finding a PG in a new city is stressful. Brokers charge high fees, listings are unverified, and students often end up far from campus. **Your-PG** solves this by offering a data-driven platform that maps PGs specifically by their **proximity to colleges** and helps students find roommates based on **lifestyle compatibility**.
 
 ---
 
 ## 🛠️ Google Technologies Used
-This project leverages the **Google Cloud Ecosystem** to enhance user experience and location accuracy:
+This project heavily leverages the **Google Cloud Ecosystem** to create a smart and secure experience:
 
-* **📍 Google Maps JavaScript API:**
-    * Used to render interactive maps on every Property Detail card.
-    * Allows students to visually visualize the PG's location relative to their college.
-    * Provides dynamic zooming and panning for neighborhood exploration.
-* **🎨 Google Fonts:**
-    * Utilized **Poppins** and **Inter** from the Google Fonts library to ensure a modern, accessible, and clean UI/UX.
-* **🌐 Google Geolocation Concepts:**
-    * The project structure is designed to integrate with Google's Geocoding API for address-to-coordinate conversion (Future Scope).
+### 1. 🤖 Google Gemini AI (GenAI)
+* **Smart Assistant:** Integrated Gemini API to power an intelligent chatbot that answers student queries about legal rights, rental agreements, and local area safety.
+* **AI Recommendations:** Uses generative AI to analyze roommate profiles and suggest matches based on compatibility summaries.
+
+### 2. 📍 Google Maps JavaScript API
+* **Interactive Visualization:** Renders dynamic maps on every Property Detail card.
+* **Context Awareness:** Allows students to visually see the route and neighborhood surrounding their potential new home.
+* **Geospatial Data:** Pins exact latitude/longitude for precise navigation.
+
+### 3. 🔐 Google Authentication (OAuth 2.0)
+* **One-Tap Sign-In:** Utilizes Google Auth for a seamless, password-less login experience.
+* **Verified Profiles:** Ensures that users are real students by verifying their Google identities, reducing fraud and enhancing safety.
 
 ---
 
@@ -50,8 +58,7 @@ This project leverages the **Google Cloud Ecosystem** to enhance user experience
 | **Frontend** | React.js, Vite, CSS3, React Router |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB (handling Geospatial Data & Schemas) |
-| **Maps** | Google Maps Platform |
-| **Algorithms** | Haversine Formula (Distance Logic) |
+| **AI & Maps** | **Google Gemini API, Google Maps API, Google Auth** |
 
 ---
 
@@ -62,6 +69,7 @@ This project is divided into two parts: `Frontend` and `Backend`.
 ### Prerequisites
 - Node.js installed
 - MongoDB installed (or MongoDB Atlas URI)
+- **Google API Keys** (for Maps & Gemini)
 
 ### 1. Clone the Repository
 ```bash
@@ -72,6 +80,7 @@ Bash
 
 cd Backend
 npm install
+# Create a .env file and add your GOOGLE_API_KEY and MONGO_URI
 node seed.js  # Loads sample data
 npm start
 3. Setup Frontend
@@ -81,11 +90,3 @@ cd Frontend/PgWebsite
 npm install
 npm run dev
 Made with ❤️ by Ratnadeep
-
-
-### How to paste it:
-1.  Go to your GitHub repo.
-2.  Click **Add file** -> **Create new file**.
-3.  Name the file: **`README.md`** (All uppercase).
-4.  Paste the code above.
-5.  Click **Commit changes**.
